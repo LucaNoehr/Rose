@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christmas Surprise</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(#c10000, #600000);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(6px);
+        padding: 25px;
+        border-radius: 18px;
+        max-width: 90%;
+        margin: auto;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    input {
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        width: 100%;
+        margin-top: 12px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 12px 25px;
+        background: #fff;
+        color: #c10000;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    #result {
+        margin-top: 25px;
+        font-size: 1.3rem;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<h1>🎄 Jule Spørgsmål  🎄</h1>
+
+<div class="card">
+    <p>Svar korrekt for at få din gave:</p>
+    <p><strong>“Hvem er den BEDSTE storebror i hele verden?”</strong></p>
+
+    <input id="answer" placeholder="Type your answer here...">
+    <button onclick="check()">CHECK</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function check() {
+    const input = document.getElementById("answer").value.toLowerCase().trim();
+    
+    if (input === "luca") {
+        const result = document.getElementById("result");
+        result.style.display = "block";
+        result.innerHTML = "🎉✨ DET ER RIGTIG! ✨🎉<br><br>Du har lige vundet <strong>800 Robux</strong>!<br><br>Glædelig jul! ❤️";
+    } else {
+        alert("Nuh uh 😄");
+    }
+}
+</script>
+
+</body>
+</html>
